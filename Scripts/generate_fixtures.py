@@ -38,6 +38,10 @@ FIXTURES = [
     ("71_tagged", 8, "MPEG_7_1_C", "7.1"),
     ("octo_tagged", 8, "Octagonal", "Octagonal"),
     ("714_atmos_tagged", 12, "Atmos_7_1_4", "7.1.4"),
+    ("512_atmos_tagged", 8, "Atmos_5_1_2", "5.1.2"),
+    ("514_atmos_tagged", 10, "Atmos_5_1_4", "5.1.4"),
+    ("712_atmos_tagged", 10, "Atmos_7_1_2", "7.1.2"),
+    ("916_atmos_tagged", 16, "Atmos_9_1_6", "9.1.6"),
 ]
 
 
