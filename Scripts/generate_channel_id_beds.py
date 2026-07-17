@@ -117,11 +117,14 @@ def build_multichannel_wav(labels, path, scratch_dir):
     total_frames = channel_count * (slot_frames + gap_frames)
 
     slots = []
-    for label in labels:
+    for index, label in enumerate(labels):
         if label is None:
             samples = lfe_tone_samples()
         else:
-            samples = speak_to_samples(label, scratch_dir)
+            # The channel number makes each announcement unique by ear —
+            # several labels share words ("left" appears in five 7.1.4
+            # channels) and a mis-routed channel is obvious from the number.
+            samples = speak_to_samples(f"channel {index + 1}: {label}", scratch_dir)
             peak = max(1, max(abs(s) for s in samples))
             scale = SPEECH_GAIN * 32767 / peak
             samples = [int(s * scale) for s in samples]
