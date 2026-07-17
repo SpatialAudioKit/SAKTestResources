@@ -33,8 +33,8 @@ import tempfile
 import wave
 
 SAMPLE_RATE = 48000
-SLOT_SECONDS = 1.4       # each channel's announcement slot
-GAP_SECONDS = 0.2        # silence between slots
+SLOT_SECONDS = 2.0       # each channel's announcement slot
+GAP_SECONDS = 0.6        # silence between slots
 LFE_TONE_HZ = 80.0
 LFE_TONE_SECONDS = 1.0
 SPEECH_GAIN = 0.9
